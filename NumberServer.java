@@ -1,5 +1,4 @@
-import java.io.IOException;
-import java.net.URI;
+c
 
 class Handler implements URLHandler {
     // The one bit of state on the server: a number that will be manipulated by
@@ -7,6 +6,7 @@ class Handler implements URLHandler {
     int num = 0;
 
     public String handleRequest(URI url) {
+        //System.out.println(url.getQuery());
         if (url.getPath().equals("/")) {
             return String.format("Kay's Number: %d", num);
         } else if (url.getPath().equals("/increment")) {
